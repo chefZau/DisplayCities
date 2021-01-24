@@ -45,8 +45,8 @@ public class CompressedArray {
     }
 
     /**
-     * 
-     * @return
+     * Returns the length of the new, compressed array
+     * @return the length of the new, compressed array
      */
     public int getLength() {
         int n = this.origArraySize;
@@ -54,25 +54,30 @@ public class CompressedArray {
     }
 
     /**
-     * 
-     * @param num
-     * @return
+     * Returns the element in the new, compressed array stored at the given index
+     * @param num the index of the element
+     * @return the element in the new, compressed array
      */
     public double getElement(int index) {
         return this.array[index];
     }
 
     /**
+     * Checks equality between the two CompressedArray objects by checking if they
+     * have the same length and that all the elements are identical in the same
+     * order
      * 
-     * @param arr
-     * @return
+     * @param obj the object we want for comparison
+     * @return they are identical
      */
-    public boolean equals(CompressedArray arr) {
-        return Arrays.equals(this.array, arr.array);
+    public boolean equals(CompressedArray obj) {
+        return Arrays.equals(this.array, obj.array);
     }
 
     /**
-     * 
+     * Builds a string that contains the CompressedArray and formats it in a
+     * trianglular structure to look like the lower left corner of a matrix. Each
+     * element should take up exactly 8 characters and show 2 decimal places.
      */
     public String toString() {
         String matrixFormat = "";
