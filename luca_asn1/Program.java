@@ -50,8 +50,8 @@ public class Program {
 
         if (showMap) {
             Map display = new Map();
-            for (City city : this.cityArray) {
-                display.addCity(city);
+            for (int i = 0; i < this.cityCount; i++) {
+                display.addCity(this.cityArray[i]);
             }
         }
     }
@@ -92,9 +92,22 @@ public class Program {
     }
 
     /**
-     * 
+     * Create a 2D double array (i.e. double[][]) with a size of N by N, where N is
+     * the number of cities in cityArray. Loop through every combination of pairs of
+     * cities and call distBetweenCities() for each pair. Save this result into the
+     * double[][] array in the attribute array.
      */
     public void compareDistances() {
+
+        double[][] cityMatrix = new double[this.cityCount][this.cityCount];
+
+        for (int i = 0; i < this.cityCount; i++) {
+            for (int j = 0; j < this.cityCount; j++) {
+                cityMatrix[i][j] = distBetweenCities(this.cityArray[i], this.cityArray[j]);
+            }
+        }
+
+        this.array = new CompressedArray(cityMatrix);
 
     }
 
