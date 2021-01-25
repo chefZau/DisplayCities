@@ -63,7 +63,7 @@ public class Program {
      * @return attribute cityArray
      */
     public City[] getCityList() {
-
+        return this.cityArray;
     }
 
     /**
