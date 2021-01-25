@@ -90,10 +90,9 @@ public class CompressedArray {
                 if( i > j ) {
                     matrixFormat += String.format("%8.2f", this.array[index]);
                     index++;
-                } else {
-                    matrixFormat += "        ";
                 }
             }
+
             matrixFormat += "\n";
         }
 
