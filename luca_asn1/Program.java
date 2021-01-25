@@ -1,5 +1,6 @@
 package luca_asn1;
 
+// import luca_asn1.MyFileReader;
 /**
  * The Program class, as its name suggests, will be the main heart of the
  * program. It will be the entry point of the program, read in a file of cities
@@ -12,16 +13,48 @@ package luca_asn1;
 public class Program {
 
     private Integer cityCount;
-    private City[] cityArray;
+    private City[] cityArray;   // keep track of all the City obj
     private CompressedArray array;
 
     /**
      * 
-     * @param file
-     * @param showMap
+     * @param file    the file to load
+     * @param showMap indicates whether or not the map GUI should be displayed
      */
     public Program(String file, boolean showMap) {
-        
+
+        this.cityCount = 0;
+        this.cityArray = new City[3];
+
+        MyFileReader objMyFileReader = new MyFileReader(file);
+
+        // skip the first line
+		// skip the first line
+		objMyFileReader.readString();
+
+		while (!objMyFileReader.endOfFile()) {
+
+			String cityName = objMyFileReader.readString();
+			int x = objMyFileReader.readInt();
+			int y = objMyFileReader.readInt();
+            
+            City city = new City(cityName, x, y);
+
+            if (this.cityCount == this.cityArray.length) {
+                this.expandCapacity();
+            }
+
+            // add city and increment count
+            this.cityArray[this.cityCount] = city;
+            this.cityCount++;
+		}
+
+        if (showMap) {
+            Map display = new Map();
+            for (City city : this.cityArray) {
+                display.addCity(city);
+            }
+        }
     }
 
     /**
@@ -37,7 +70,7 @@ public class Program {
      * Expands the capacity of cityArray by adding 3 additional slots to the array
      */
     private void expandCapacity() {
-        
+
     }
 
     /**
