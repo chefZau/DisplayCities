@@ -21,7 +21,7 @@ The following is the output we should get from the file ``./resource/cities1.txt
 
 ## Get Start!
 
-As we can see on the proejct title, this is the first assignment of the course CS1027. If you want to know more about the implementation, please keep reading over to the end of the file.
+As we can see on the proejct title, this is the first assignment of the course [CS1027](https://www.csd.uwo.ca/courses/CS1027b/). If you want to know more about the implementation, please keep reading over to the end of the file.
 
 If you are cloning or forking this repository, this project's entry point is at the following path: ``root/luca_asn1/Program.java``. It is a console program. To run it, here are some file paths for your argument:
 
