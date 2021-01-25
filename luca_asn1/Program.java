@@ -119,4 +119,8 @@ public class Program {
     public CompressedArray getArray() {
         return this.array;
     }
+
+    public static void main(String[] args) {
+        Program prog = new Program(args[0], true);
+    }
 }
