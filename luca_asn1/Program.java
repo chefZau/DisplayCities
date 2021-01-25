@@ -71,6 +71,12 @@ public class Program {
      */
     private void expandCapacity() {
 
+        City[] newArray = new City[this.cityCount + 3];
+        
+        for(int i = 0; i < this.cityCount; i++)
+            newArray[i] = this.cityArray[i];
+        
+        this.cityArray = newArray;
     }
 
     /**
