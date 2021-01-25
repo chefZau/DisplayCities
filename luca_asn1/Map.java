@@ -6,12 +6,10 @@ import java.awt.Image;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
-import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 public class Map extends JFrame {
@@ -44,7 +42,7 @@ public class Map extends JFrame {
 		mainPanel = new JLayeredPane();
 
 		// Load Canada map.
-		ImageIcon icon = new ImageIcon("canada.jpg");
+		ImageIcon icon = new ImageIcon("./resource/canada.jpg");
 		Image img = icon.getImage();
 		Image scaledImage = img.getScaledInstance(map_length, map_height, java.awt.Image.SCALE_SMOOTH);
 		icon = new ImageIcon(scaledImage);
