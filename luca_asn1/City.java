@@ -1,3 +1,5 @@
+package luca_asn1;
+
 /**
  * The City class represents each city that is loaded in from a text file. It is
  * a simple class that just contains the city's name, x and y coordinates, and a
@@ -6,7 +8,7 @@
  * Created by Luca Zhou on 1/24/2021.
  */
 public class City {
-    
+
     private String name;
     private Integer x;
     private Integer y;
@@ -14,6 +16,7 @@ public class City {
 
     /**
      * The constructor of this class.
+     * 
      * @param newName the name of the city
      * @param newX    the x coordinates
      * @param newY    the y coordinates
@@ -27,6 +30,7 @@ public class City {
 
     /**
      * Getter method for attribute name.
+     * 
      * @return attribute name
      */
     public String getName() {
@@ -35,6 +39,7 @@ public class City {
 
     /**
      * Getter method for attribute x.
+     * 
      * @return attribute x
      */
     public int getX() {
@@ -43,6 +48,7 @@ public class City {
 
     /**
      * Getter method for attribute y.
+     * 
      * @return attribute y
      */
     public int getY() {
@@ -51,6 +57,7 @@ public class City {
 
     /**
      * Getter method for attribute marker.
+     * 
      * @return attribute marker
      */
     public CityMarker getMarker() {
@@ -59,6 +66,7 @@ public class City {
 
     /**
      * Setter method for attribute name.
+     * 
      * @param newName new name
      */
     public void setName(String newName) {
@@ -67,6 +75,7 @@ public class City {
 
     /**
      * Setter method for attribute x.
+     * 
      * @param newX new x
      */
     public void setX(Integer newX) {
@@ -75,6 +84,7 @@ public class City {
 
     /**
      * Setter method for attribute y.
+     * 
      * @param newY new y
      */
     public void setY(Integer newY) {
@@ -83,6 +93,7 @@ public class City {
 
     /**
      * Setter method for attribute marker.
+     * 
      * @param newMarker new marker
      */
     public void setMarker(CityMarker newMarker) {
@@ -91,6 +102,7 @@ public class City {
 
     /**
      * Returns the string representation of the object.
+     * 
      * @return the name attribute of the object
      */
     public String toString() {

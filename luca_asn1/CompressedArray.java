@@ -1,3 +1,5 @@
+package luca_asn1;
+
 import java.util.Arrays;
 
 /**
@@ -14,20 +16,21 @@ public class CompressedArray {
     private int origArraySize;
     private Double[] array;
 
-
     /**
-     * The constructor of the class. Here is what it will do:
-     * 1. Takes original array, initializes and populates the attribute array 
-     *    into an array containing the left and below the diagonal elements.
+     * The constructor of the class. Here is what it will do: 1. Takes original
+     * array, initializes and populates the attribute array into an array containing
+     * the left and below the diagonal elements.
+     * 
      * @param originalArray
      */
     public CompressedArray(double[][] originalArray) {
 
         // get the size of the lower-left triangle elements
-        // note the 2D array will always be n * n, since we have n cities in both col and row
+        // note the 2D array will always be n * n, since we have n cities in both col
+        // and row
         int n = originalArray.length;
         int size = (n * n - n) / 2;
-        
+
         this.origArraySize = n;
 
         this.array = new Double[size];
@@ -46,6 +49,7 @@ public class CompressedArray {
 
     /**
      * Returns the length of the new, compressed array
+     * 
      * @return the length of the new, compressed array
      */
     public int getLength() {
@@ -55,6 +59,7 @@ public class CompressedArray {
 
     /**
      * Returns the element in the new, compressed array stored at the given index
+     * 
      * @param num the index of the element
      * @return the element in the new, compressed array
      */
@@ -86,8 +91,8 @@ public class CompressedArray {
 
         for (int i = 0; i < this.origArraySize; i++) {
             for (int j = 0; j < this.origArraySize; j++) {
-                
-                if( i > j ) {
+
+                if (i > j) {
                     matrixFormat += String.format("%8.2f", this.array[index]);
                     index++;
                 }

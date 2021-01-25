@@ -1,7 +1,9 @@
+package luca_asn1;
+
 import javax.swing.ImageIcon;
 
 public class CityMarker extends ImageIcon {
-	
+
 	/**
 	 *
 	 */

@@ -1,3 +1,5 @@
+package luca_asn1;
+
 /**
  * The Program class, as its name suggests, will be the main heart of the
  * program. It will be the entry point of the program, read in a file of cities
