@@ -17,7 +17,7 @@ public class TestProgram {
 		for (int f = 0; f < files.length; f++) {
 			String file = files[f];
 
-			Program prog = new Program(file, true);
+			Program prog = new Program(file, false);
 			prog.compareDistances();
 			CompressedArray ca = prog.getArray();
 
