@@ -1,6 +1,5 @@
 package luca_asn1;
 
-// import luca_asn1.MyFileReader;
 /**
  * The Program class, as its name suggests, will be the main heart of the
  * program. It will be the entry point of the program, read in a file of cities
@@ -13,7 +12,7 @@ package luca_asn1;
 public class Program {
 
     private Integer cityCount;
-    private City[] cityArray;   // keep track of all the City obj
+    private City[] cityArray; // keep track of all the City obj
     private CompressedArray array;
 
     /**
@@ -29,15 +28,15 @@ public class Program {
         MyFileReader objMyFileReader = new MyFileReader(file);
 
         // skip the first line
-		// skip the first line
-		objMyFileReader.readString();
+        // skip the first line
+        objMyFileReader.readString();
 
-		while (!objMyFileReader.endOfFile()) {
+        while (!objMyFileReader.endOfFile()) {
 
-			String cityName = objMyFileReader.readString();
-			int x = objMyFileReader.readInt();
-			int y = objMyFileReader.readInt();
-            
+            String cityName = objMyFileReader.readString();
+            int x = objMyFileReader.readInt();
+            int y = objMyFileReader.readInt();
+
             City city = new City(cityName, x, y);
 
             if (this.cityCount == this.cityArray.length) {
@@ -47,7 +46,7 @@ public class Program {
             // add city and increment count
             this.cityArray[this.cityCount] = city;
             this.cityCount++;
-		}
+        }
 
         if (showMap) {
             Map display = new Map();
@@ -72,10 +71,10 @@ public class Program {
     private void expandCapacity() {
 
         City[] newArray = new City[this.cityCount + 3];
-        
-        for(int i = 0; i < this.cityCount; i++)
+
+        for (int i = 0; i < this.cityCount; i++)
             newArray[i] = this.cityArray[i];
-        
+
         this.cityArray = newArray;
     }
 
@@ -85,7 +84,11 @@ public class Program {
      * @return the Euclidean distance
      */
     public double distBetweenCities(City city1, City city2) {
+        
+        double ac = Math.abs(city2.getY() - city1.getY());
+        double cb = Math.abs(city2.getX() - city1.getX());
 
+        return Math.hypot(ac, cb);
     }
 
     /**
