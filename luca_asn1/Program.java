@@ -84,7 +84,7 @@ public class Program {
      * @return the Euclidean distance
      */
     public double distBetweenCities(City city1, City city2) {
-        
+
         double ac = Math.abs(city2.getY() - city1.getY());
         double cb = Math.abs(city2.getX() - city1.getX());
 
@@ -104,6 +104,6 @@ public class Program {
      * @return attribute array
      */
     public CompressedArray getArray() {
-
+        return this.array;
     }
 }
