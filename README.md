@@ -1,4 +1,4 @@
-# CS1027 Computer Science Fundamentals II - ASSIGNMENT 1
+# CS1027 CS Fundamentals II - Assignment 1
 
 A Java program for creating a visualization of Canadian cities. The input of the program is a text file; here is a glance at its format:
 
