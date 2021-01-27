@@ -100,10 +100,10 @@ This class represents each city that is loaded in from a text file. It is a simp
 
 The class must have the following private variables:
 
-* name (String)
-* x (int)
-* y (int)
-* marker (CityMarker)
+* ``name`` (String)
+* ``x`` (int)
+* ``y`` (int)
+* ``marker`` (CityMarker)
 
 The class must have the following public methods:
 
@@ -134,8 +134,8 @@ This class represents the array that has been compressed from a matrix (2D array
 
 The class must have the following private variables:
 
-* origArraySize (int)
-* array (double[])
+* ``origArraySize`` (int)
+* ``array`` (double[])
 
 The class must have the following public methods:
 
@@ -159,9 +159,9 @@ This class, as its name suggests, will be the main heart of the program. It will
 
 The class must have the following private variables:
 
-* cityCount (int)
-* cityArray (City[])
-* array (CompressedArray)
+* ``cityCount`` (int)
+* ``cityArray`` (City[])
+* ``array`` (CompressedArray)
 
 The class must have the following methods:
 
