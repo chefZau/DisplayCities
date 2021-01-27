@@ -89,8 +89,13 @@ The following is a list of files provided to you for this assignment. Please do 
 
 ## Classes to implement
 
-For this assignment, you must implement 3 Java classes: City, CompressedArray, and
-Program. Follow the guidelines for each one below.
+For this assignment, you must implement 3 Java classes: 
+
+* **City.java**
+* **CompressedArray.java**
+* **Program.java**
+
+Follow the guidelines for each one below.
 
 In all of these classes, you can implement more private (helper) methods, if you want to, but you may not implement more public methods. You may **not** add instance variables other than the ones specified below. Penalties will be applied if you implement additional instance variables or change the variable types or modifiers than what is described here.
 
